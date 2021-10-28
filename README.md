@@ -14,6 +14,7 @@ This repo is used to test the speed of the mobile terminal models
 | PicoDet-Shufflenetv2 1x      |  416*416   |          30.0           |        44.6        |        1.17        |       1.53        |              15.06              |            **10.63**            |
 | PicoDet-MobileNetv3-large 1x |  416*416   |          35.6           |        52.0        |        3.55        |       2.80        |              20.71              |            **17.88**            |
 | PicoDet-LCNet 1.5x           |  416*416   |          36.3           |        52.2        |        3.10        |       3.85        |              21.29              |            **20.8**             |
+
 **Attetnion:** * represents NCNN inference speed, # represents Paddle-Lite inference speed.
 
 # reference from
