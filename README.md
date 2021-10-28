@@ -22,7 +22,9 @@ This repo is used to test the speed of the mobile terminal models
 git@github.com:nihui/ncnn-android-benchmark.git
 ```
 
-# ncnn-android-benchmark
+# Start
+
+## ncnn-android-benchmark
 
 The ncnn android benchmark app
 
@@ -30,16 +32,16 @@ this is a sample ncnn android project, it depends on ncnn library only
 
 https://github.com/Tencent/ncnn
 
-## how to build and run
-### step1
+### how to build and run
+#### step1
 https://github.com/Tencent/ncnn/releases
 download ncnn-android-vulkan.zip or build ncnn for android yourself
 
-### step2
+#### step2
 extract ncnn-android-vulkan.zip into app/src/main/jni or change the ncnn_DIR path to yours in app/src/main/jni/CMakeLists.txt
 
-### step3
+#### step3
 open this project with Android Studio, build it and enjoy!
 
-## screenshot
+### screenshot
 ![](screenshot.jpg)
