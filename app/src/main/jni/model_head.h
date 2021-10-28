@@ -8,7 +8,8 @@ using std::vector;
 
 
 map<string, vector<string>> modelHead = {
-        {"picodet",
+        {
+                "picodet",
                 {
                         {"save_infer_model/scale_0.tmp_1"},
                         {"save_infer_model/scale_4.tmp_1"},
