@@ -17,7 +17,7 @@ This repo is used to test the speed of the mobile terminal models
 
 **Attetnion:** * represents NCNN inference speed, # represents Paddle-Lite inference speed.
 
-# reference from
+# refer from
 ```
 git@github.com:nihui/ncnn-android-benchmark.git
 ```
