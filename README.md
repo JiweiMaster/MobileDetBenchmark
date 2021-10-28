@@ -3,10 +3,6 @@
 git@github.com:nihui/ncnn-android-benchmark.git
 ```
 
-
-
-
-
 # ncnn-android-benchmark
 
 The ncnn android benchmark app
@@ -34,5 +30,5 @@ extract ncnn-android-vulkan.zip into app/src/main/jni or change the ncnn_DIR pat
 open this project with Android Studio, build it and enjoy!
 
 ## screenshot
-![](screenshot.png)
+![](screenshot.jpg)
 
