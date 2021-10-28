@@ -1,0 +1,6 @@
+.gradle
+./app/.cxx
+./app/build
+./app/src/main/jni/ncnn-20201218-android-vulkan
+./app/src/main/jni/ncnn-android-vulkan-lib
+./app/src/main/assets/useless

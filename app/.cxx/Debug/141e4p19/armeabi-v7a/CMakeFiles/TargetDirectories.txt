@@ -1,0 +1,3 @@
+/Users/jiwei01/Work/github/ncnn-android-benchmark/app/.cxx/Debug/141e4p19/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/jiwei01/Work/github/ncnn-android-benchmark/app/.cxx/Debug/141e4p19/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/jiwei01/Work/github/ncnn-android-benchmark/app/.cxx/Debug/141e4p19/armeabi-v7a/CMakeFiles/benchmarkncnn.dir

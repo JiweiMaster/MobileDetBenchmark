@@ -1,0 +1,1 @@
+/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/jni/CMakeLists.txt

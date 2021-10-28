@@ -1,0 +1,33 @@
+{
+  "buildFiles": [
+    "/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/jni/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/jiwei01/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+      "-C",
+      "/Users/jiwei01/Work/github/ncnn-android-benchmark/app/.cxx/Debug/141e4p19/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/jiwei01/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+    "-C",
+    "/Users/jiwei01/Work/github/ncnn-android-benchmark/app/.cxx/Debug/141e4p19/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "benchmarkncnn-Debug-armeabi-v7a": {
+      "artifactName": "benchmarkncnn",
+      "buildCommandComponents": [
+        "/Users/jiwei01/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja",
+        "-C",
+        "/Users/jiwei01/Work/github/ncnn-android-benchmark/app/.cxx/Debug/141e4p19/armeabi-v7a",
+        "benchmarkncnn"
+      ],
+      "abi": "armeabi-v7a",
+      "output": "/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/cxx/Debug/141e4p19/obj/armeabi-v7a/libbenchmarkncnn.so",
+      "runtimeFiles": []
+    }
+  }
+}

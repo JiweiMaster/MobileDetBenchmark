@@ -1,0 +1,36 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.tencent.benchmarkncnn"
+4    android:versionCode="1"
+5    android:versionName="1.1" >
+6
+7    <uses-sdk android:minSdkVersion="24" />
+7-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml
+8
+9    <application
+9-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:6:5-14:19
+10        android:debuggable="true"
+11        android:extractNativeLibs="false"
+12        android:label="@string/app_name"
+12-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:6:18-50
+13        android:testOnly="true" >
+14        <activity
+14-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:7:9-13:20
+15            android:name="com.tencent.benchmarkncnn.MainActivity"
+15-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:7:19-46
+16            android:label="@string/app_name" >
+16-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:8:19-51
+17            <intent-filter>
+17-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:9:13-12:29
+18                <action android:name="android.intent.action.MAIN" />
+18-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:10:17-69
+18-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:10:25-66
+19
+20                <category android:name="android.intent.category.LAUNCHER" />
+20-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:11:17-77
+20-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:11:27-74
+21            </intent-filter>
+22        </activity>
+23    </application>
+24
+25</manifest>

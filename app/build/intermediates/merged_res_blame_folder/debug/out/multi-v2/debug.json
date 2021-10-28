@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/merged_res/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "-1,22,-1,-1,-1,-1",
+                        "startColumns": "-1,4,-1,-1,-1,-1",
+                        "startOffsets": "-1,597,-1,-1,-1,-1",
+                        "endLines": "-1,47,-1,-1,-1,-1",
+                        "endColumns": "-1,19,-1,-1,-1,-1",
+                        "endOffsets": "-1,1593,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,8,34,39,49,53",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,208,1209,1349,1593,1700",
+                        "endLines": "7,33,38,48,52,53",
+                        "endColumns": "19,19,19,19,19,50",
+                        "endOffsets": "203,1204,1344,1588,1695,1746"
+                    }
+                }
+            ]
+        }
+    ]
+}
