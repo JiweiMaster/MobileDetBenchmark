@@ -229,11 +229,11 @@ JNIEXPORT void JNI_OnUnload(JavaVM* vm, void* reserved)
 }
 
 // public native boolean Init();
-JNIEXPORT jboolean JNICALL Java_com_tencent_benchmarkncnn_BenchmarkNcnn_Init(JNIEnv* env, jobject thiz)
+JNIEXPORT jboolean JNICALL Java_com_baidu_mobiledetbenchmark_BenchmarkNcnn_Init(JNIEnv* env, jobject thiz)
 {
-    jclass localObjCls = env->FindClass("com/tencent/benchmarkncnn/BenchmarkNcnn$Obj");
+    jclass localObjCls = env->FindClass("com/baidu/mobiledetbenchmark/BenchmarkNcnn$Obj");
     objCls = reinterpret_cast<jclass>(env->NewGlobalRef(localObjCls));
-    constructortorId = env->GetMethodID(objCls, "<init>", "(Lcom/tencent/benchmarkncnn/BenchmarkNcnn;)V");
+    constructortorId = env->GetMethodID(objCls, "<init>", "(Lcom/baidu/mobiledetbenchmark/BenchmarkNcnn;)V");
     retcodeId = env->GetFieldID(objCls, "retcode", "I");
     minId = env->GetFieldID(objCls, "min", "F");
     maxId = env->GetFieldID(objCls, "max", "F");
@@ -243,7 +243,7 @@ JNIEXPORT jboolean JNICALL Java_com_tencent_benchmarkncnn_BenchmarkNcnn_Init(JNI
 }
 
 // public native String GetPlatform();
-JNIEXPORT jstring JNICALL Java_com_tencent_benchmarkncnn_BenchmarkNcnn_GetPlatform(JNIEnv* env, jobject thiz)
+JNIEXPORT jstring JNICALL Java_com_baidu_mobiledetbenchmark_BenchmarkNcnn_GetPlatform(JNIEnv* env, jobject thiz)
 {
     char platform[PROP_VALUE_MAX+1];
     __system_property_get("ro.board.platform", platform);
@@ -252,12 +252,12 @@ JNIEXPORT jstring JNICALL Java_com_tencent_benchmarkncnn_BenchmarkNcnn_GetPlatfo
 }
 
 // public native String GetNcnnVersion();
-JNIEXPORT jstring JNICALL Java_com_tencent_benchmarkncnn_BenchmarkNcnn_GetNcnnVersion(JNIEnv* env, jobject thiz)
+JNIEXPORT jstring JNICALL Java_com_baidu_mobiledetbenchmark_BenchmarkNcnn_GetNcnnVersion(JNIEnv* env, jobject thiz)
 {
     return env->NewStringUTF(ncnn_version());
 }
 
-JNIEXPORT jobject JNICALL Java_com_tencent_benchmarkncnn_BenchmarkNcnn_Run(JNIEnv* env, jobject thiz, jobject assetManager, jint threads, jint powersave,
+JNIEXPORT jobject JNICALL Java_com_baidu_mobiledetbenchmark_BenchmarkNcnn_Run(JNIEnv* env, jobject thiz, jobject assetManager, jint threads, jint powersave,
                                                                            jboolean mempool, jboolean winograd, jboolean sgemm, jboolean pack4, jboolean bf16s,
                                                                            jboolean gpu, jboolean gpufp16p, jboolean gpufp16s, jboolean gpufp16a, jboolean gpupack8,
                                                                            jint model, jint loops)

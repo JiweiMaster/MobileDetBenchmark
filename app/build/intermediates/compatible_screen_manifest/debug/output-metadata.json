@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.tencent.benchmarkncnn",
+  "applicationId": "com.baidu.mobiledetbenchmark",
   "variantName": "debug",
   "elements": []
 }

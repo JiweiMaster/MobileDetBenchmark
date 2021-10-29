@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.tencent.benchmarkncnn",
+  "applicationId": "com.baidu.mobiledetbenchmark",
   "variantName": "debug",
   "elements": [
     {
@@ -13,7 +13,7 @@
       "attributes": [],
       "versionCode": 1,
       "versionName": "1.1",
-      "outputFile": "com.tencent.benchmarkncnn-debug.apk"
+      "outputFile": "com.baidu.mobiledetbenchmark-debug.apk"
     }
   ],
   "elementType": "File"

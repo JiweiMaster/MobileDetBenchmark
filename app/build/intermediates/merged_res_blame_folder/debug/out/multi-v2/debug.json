@@ -6,20 +6,20 @@
                 {
                     "source": "/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "-1,22,-1,-1,-1,-1",
-                        "startColumns": "-1,4,-1,-1,-1,-1",
-                        "startOffsets": "-1,597,-1,-1,-1,-1",
-                        "endLines": "-1,49,-1,-1,-1,-1",
-                        "endColumns": "-1,19,-1,-1,-1,-1",
-                        "endOffsets": "-1,1679,-1,-1,-1,-1"
+                        "startLines": "51,22,17,7,3,2",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "1721,597,457,213,106,55",
+                        "endLines": "56,50,21,16,6,2",
+                        "endColumns": "19,19,19,19,19,50",
+                        "endOffsets": "1869,1716,592,452,208,101"
                     },
                     "to": {
-                        "startLines": "2,8,36,41,51,55",
+                        "startLines": "2,8,37,42,52,56",
                         "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,208,1295,1435,1679,1786",
-                        "endLines": "7,35,40,50,54,55",
+                        "startOffsets": "55,208,1332,1472,1716,1823",
+                        "endLines": "7,36,41,51,55,56",
                         "endColumns": "19,19,19,19,19,50",
-                        "endOffsets": "203,1290,1430,1674,1781,1832"
+                        "endOffsets": "203,1327,1467,1711,1818,1869"
                     }
                 }
             ]

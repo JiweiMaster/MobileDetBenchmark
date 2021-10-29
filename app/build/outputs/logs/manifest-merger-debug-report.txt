@@ -8,7 +8,7 @@ INJECTED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/And
 INJECTED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:2:1-15:12
 INJECTED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:2:1-15:12
 	package
-		ADDED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:3:7-42
+		ADDED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:3:7-45
 		INJECTED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -25,12 +25,12 @@ application
 ADDED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:6:5-14:19
 	android:label
 		ADDED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:6:18-50
-activity#com.tencent.benchmarkncnn.MainActivity
+activity#com.baidu.mobiledetbenchmark.MainActivity
 ADDED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:7:9-13:20
 	android:label
 		ADDED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:8:19-51
 	android:name
-		ADDED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:7:19-46
+		ADDED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:7:19-75
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:9:13-12:29
 action#android.intent.action.MAIN

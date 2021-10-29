@@ -77,3 +77,14 @@
 3665	6506	1635388306	/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/cxx/Debug/141e4p19/obj/arm64-v8a/libbenchmarkncnn.so	eecc1c8bf793b5d2
 2	1527	1635388409	CMakeFiles/benchmarkncnn.dir/benchmarkncnn_jni.cpp.o	980e33a5cb987d6c
 1528	3346	1635388411	/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/cxx/Debug/141e4p19/obj/arm64-v8a/libbenchmarkncnn.so	eecc1c8bf793b5d2
+3	1638	1635478683	CMakeFiles/benchmarkncnn.dir/benchmarkncnn_jni.cpp.o	980e33a5cb987d6c
+1639	3397	1635478685	/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/cxx/Debug/141e4p19/obj/arm64-v8a/libbenchmarkncnn.so	eecc1c8bf793b5d2
+2	1687	1635508496	CMakeFiles/benchmarkncnn.dir/benchmarkncnn_jni.cpp.o	980e33a5cb987d6c
+1688	3153	1635508497	/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/cxx/Debug/141e4p19/obj/arm64-v8a/libbenchmarkncnn.so	eecc1c8bf793b5d2
+4	1591	1635508649	CMakeFiles/benchmarkncnn.dir/benchmarkncnn_jni.cpp.o	980e33a5cb987d6c
+1591	3026	1635508650	/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/cxx/Debug/141e4p19/obj/arm64-v8a/libbenchmarkncnn.so	eecc1c8bf793b5d2
+6	1716	1635511177	CMakeFiles/benchmarkncnn.dir/benchmarkncnn_jni.cpp.o	980e33a5cb987d6c
+1716	3264	1635511179	/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/cxx/Debug/141e4p19/obj/arm64-v8a/libbenchmarkncnn.so	eecc1c8bf793b5d2
+1	10	0	clean	864ef8656b1873cc
+4	1748	1635511419	CMakeFiles/benchmarkncnn.dir/benchmarkncnn_jni.cpp.o	980e33a5cb987d6c
+1748	5180	1635511422	/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/cxx/Debug/141e4p19/obj/arm64-v8a/libbenchmarkncnn.so	eecc1c8bf793b5d2

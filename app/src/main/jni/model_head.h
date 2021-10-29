@@ -79,6 +79,7 @@ map<string, vector<string>> modelHead = {
 
 const char* g_models[] =
         {
+                "yolov3-tiny-416",
                 "yolov4-tiny-416",
                 "ppyolo-tiny-650e-320",
                 "ppyolo-tiny-650e-416",

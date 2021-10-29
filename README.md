@@ -1,4 +1,4 @@
-# mobile detection benchmark
+# Mobile Detection Benchmark
 This repo is used to test the speed of the mobile terminal models
 
 # Benchmark Result
@@ -17,11 +17,6 @@ This repo is used to test the speed of the mobile terminal models
 
 **Attetnion:** * represents NCNN inference speed, # represents Paddle-Lite inference speed.
 
-# refer from
-```
-git@github.com:nihui/ncnn-android-benchmark.git
-```
-
 # Start
 
 ## ncnn-android-benchmark
@@ -35,13 +30,21 @@ https://github.com/Tencent/ncnn
 ### how to build and run
 #### step1
 https://github.com/Tencent/ncnn/releases
-download ncnn-android-vulkan.zip or build ncnn for android yourself
+download ncnn-20201218-android-vulkan.zip or build ncnn for android yourself
 
 #### step2
-extract ncnn-android-vulkan.zip into app/src/main/jni or change the ncnn_DIR path to yours in app/src/main/jni/CMakeLists.txt
+extract ncnn-20201218-android-vulkan.zip into app/src/main/jni or change the ncnn_DIR path to yours in app/src/main/jni/CMakeLists.txt
 
 #### step3
 open this project with Android Studio, build it and enjoy!
 
 ### screenshot
 ![](screenshot.jpg)
+
+# TODO
+## TNN、MNN速度补充，欢迎大家贡献
+
+# Refer from
+```
+git@github.com:nihui/ncnn-android-benchmark.git
+```

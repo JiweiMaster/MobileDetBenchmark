@@ -16,6 +16,7 @@
         <item>Little</item>
         <item>Big</item>
     </string-array><string-array name="model_array">
+        <item>yolov3-tiny-416</item>
         <item>yolov4-tiny-416</item>
         <item>ppyolo-tiny-650e-320</item>
         <item>ppyolo-tiny-650e-416</item>

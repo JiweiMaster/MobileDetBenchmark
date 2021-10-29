@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.tencent.benchmarkncnn"
+3    package="com.baidu.mobiledetbenchmark"
 4    android:versionCode="1"
 5    android:versionName="1.1" >
 6
@@ -16,8 +16,8 @@
 13        android:testOnly="true" >
 14        <activity
 14-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:7:9-13:20
-15            android:name="com.tencent.benchmarkncnn.MainActivity"
-15-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:7:19-46
+15            android:name="com.baidu.mobiledetbenchmark.MainActivity"
+15-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:7:19-75
 16            android:label="@string/app_name" >
 16-->/Users/jiwei01/Work/github/ncnn-android-benchmark/app/src/main/AndroidManifest.xml:8:19-51
 17            <intent-filter>

@@ -4,7 +4,7 @@
     "type": "PROCESSED_RES",
     "kind": "Directory"
   },
-  "applicationId": "com.tencent.benchmarkncnn",
+  "applicationId": "com.baidu.mobiledetbenchmark",
   "variantName": "debug",
   "elements": [
     {

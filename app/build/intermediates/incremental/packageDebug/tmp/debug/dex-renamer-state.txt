@@ -1,6 +1,6 @@
-#Thu Oct 28 10:41:26 CST 2021
-base.1=/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex
-path.1=5/classes.dex
+#Fri Oct 29 20:43:45 CST 2021
+base.1=/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
+path.1=3/classes.dex
 base.0=/Users/jiwei01/Work/github/ncnn-android-benchmark/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
