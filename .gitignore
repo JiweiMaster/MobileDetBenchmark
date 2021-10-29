@@ -2,5 +2,4 @@
 app/.cxx
 app/build
 app/src/main/jni/ncnn-20201218-android-vulkan
-app/src/main/assets/useless
 .idea

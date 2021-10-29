@@ -1,7 +1,0 @@
-Executable : /Users/jiwei01/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
-arguments : 
--C
-/Users/jiwei01/Work/github/ncnn-android-benchmark/app/.cxx/Debug/141e4p19/armeabi-v7a
-benchmarkncnn
-jvmArgs : 
-
