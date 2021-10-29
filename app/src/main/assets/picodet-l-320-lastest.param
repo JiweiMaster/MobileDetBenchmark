@@ -1,6 +1,6 @@
 7767517
 419 471
-Input            data                     0 1 data -23330=4,3,640,640,3 0=640 1=640 2=3
+Input            data                     0 1 data -23330=4,3,320,320,3 0=320 1=320 2=3
 Convolution      Conv_0                   1 1 data conv2d_151.tmp_0 0=24 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=648
 HardSwish        Div_0                    1 1 conv2d_151.tmp_0 batch_norm_0.tmp_4 0=1.666667e-01 1=5.000000e-01
 Pooling          MaxPool_0                1 1 batch_norm_0.tmp_4 pool2d_0.tmp_0 0=0 1=3 11=3 2=2 12=2 3=1 13=1 14=1 15=1 5=1
@@ -418,4 +418,4 @@ Sigmoid          Sigmoid_3                1 1 split_13.tmp_0 sigmoid_3.tmp_0
 Reshape          Reshape_56               1 1 sigmoid_3.tmp_0 reshape2_26.tmp_0 0=-1 1=80
 Permute          Transpose_16             1 1 reshape2_26.tmp_0 save_infer_model/scale_3.tmp_1 0=1
 Reshape          Reshape_57               1 1 split_13.tmp_1 reshape2_27.tmp_0 0=-1 1=32
-Permute          Transpose_17             1 1 reshape2_27.tmp_0 output 0=1
+Permute          Transpose_17             1 1 reshape2_27.tmp_0 save_infer_model/scale_7.tmp_1 0=1

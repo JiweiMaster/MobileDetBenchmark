@@ -103,6 +103,8 @@ const char* g_models[] =
                 "test-ppyolo-tiny-650e-320",
                 "test-ppyolo-tiny-650e-416",
                 "picodet-l-640-lastest",
+                "picodet-l-320-lastest",
+                "picodet-l-416-lastest"
         };
 
 

@@ -1,0 +1,18 @@
+CMake Error at CMakeLists.txt:7 (find_package):
+  By not providing "Findncnn.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "ncnn", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "ncnn" with any of
+  the following names:
+
+    ncnnConfig.cmake
+    ncnn-config.cmake
+
+  Add the installation prefix of "ncnn" to CMAKE_PREFIX_PATH or set
+  "ncnn_DIR" to a directory containing one of the above files.  If "ncnn"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

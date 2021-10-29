@@ -40,6 +40,8 @@
         <item>test-ppyolo-tiny-650e-320</item>
         <item>test-ppyolo-tiny-650e-416</item>
         <item>picodet-l-640-lastest</item>
+        <item>picodet-l-320-lastest</item>
+        <item>picodet-l-416-lastest</item>
     </string-array><string-array name="loops_array">
         <item>5</item>
         <item>10</item>
