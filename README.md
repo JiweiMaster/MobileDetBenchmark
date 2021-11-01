@@ -1,6 +1,7 @@
 # Mobile Detection Benchmark
 This repo is used to test the speed of the mobile terminal models
 
+
 # Benchmark Result
 | Model                        | Input size | mAP<sup>val<br>0.5:0.95 | mAP<sup>val<br>0.5 | Params<br><sup>(M) | FLOPS<br><sup>(G) | Latency<sup>*<sup><br><sup>(ms) | Latency<sup>#<sup><br><sup>(ms) | Config                                                                                                                                                                           |
 | :--------------------------- | :--------: | :---------------------: | :----------------: | :----------------: | :---------------: | :-----------------------------: | :-----------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,36 +27,22 @@ This repo is used to test the speed of the mobile terminal models
 | PicoDet-MobileNetv3-large 1x |  416*416   |          35.6           |        52.0        |        3.55        |       2.80        |              20.71              |            **17.88**            | [model]() </br> [link]()                                                                                                                                                        |
 | PicoDet-LCNet 1.5x           |  416*416   |          36.3           |        52.2        |        3.10        |       3.85        |              21.29              |            **20.8**             | [model]() </br> [link]()                                                                                                                                                        |
 
-**Attetnion:** * represents NCNN inference speed, # represents Paddle-Lite inference speed.
+<details open>
+<summary><b>Table Notes:</b></summary>
 
-# Quick Start
+- `*` represents NCNN, `#` represent PaddleLite
+- All our models test on `Qualcomm Snapdragon 865(4\*A77+4\*A55)` with 4 threads by arm8 and with FP16. In the above table, test latency on [NCNN](https://github.com/Tencent/ncnn) and `Lite`->[Paddle-Lite](https://github.com/PaddlePaddle/Paddle-Lite).
+- PicoDet is trained on COCO train2017 dataset and evaluated on COCO val2017.
 
-## ncnn-android-benchmark
 
-The ncnn android benchmark app
 
-this is a sample ncnn android project, it depends on ncnn library only
 
-https://github.com/Tencent/ncnn
 
-### how to build and run
-#### step1
-https://github.com/Tencent/ncnn/releases
-download ncnn-20201218-android-vulkan.zip or build ncnn for android yourself
 
-#### step2
-extract ncnn-20201218-android-vulkan.zip into app/src/main/jni or change the ncnn_DIR path to yours in app/src/main/jni/CMakeLists.txt
-
-#### step3
-open this project with Android Studio, build it and enjoy!
-
-### screenshot
-<img src="./screenshot.jpg" width="40%" height="40%"/>
+#
 
 # TODO
-## TNN、MNN速度补充，欢迎大家贡献
+## TNN, MNN speed supplement, welcome to contribute!
 
-# Refer from
-```
-git@github.com:nihui/ncnn-android-benchmark.git
-```
+## Paddle-Lite Android Benchmark
+https://github.com/PaddlePaddle/Paddle-Lite
