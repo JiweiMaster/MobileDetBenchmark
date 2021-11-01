@@ -32,7 +32,7 @@ This repo is used to test the speed of the mobile terminal models
 
 - `*` represents NCNN, `#` represent PaddleLite
 - All our models test on `Qualcomm Snapdragon 865(4\*A77+4\*A55)` with 4 threads by arm8 and with FP16. In the above table, test latency on [NCNN](https://github.com/Tencent/ncnn) and `Lite`->[Paddle-Lite](https://github.com/PaddlePaddle/Paddle-Lite).
-- PicoDet is trained on COCO train2017 dataset and evaluated on COCO val2017.
+- All model are trained on COCO train2017 dataset and evaluated on COCO val2017.
 
 
 
