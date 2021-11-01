@@ -48,6 +48,9 @@
         <item>picodet-l-640-lastest</item>
         <item>picodet-l-320-lastest</item>
         <item>picodet-l-416-lastest</item>
+        <item>ESNet_464_1x</item>
+        <item>ESNet_512_1x</item>
+        <item>ShuffleNetV2_1_5x</item>
     </string-array>
     <string-array name="loops_array">
         <item>5</item>

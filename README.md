@@ -50,8 +50,7 @@ extract ncnn-20201218-android-vulkan.zip into app/src/main/jni or change the ncn
 open this project with Android Studio, build it and enjoy!
 
 ### screenshot
-![](screenshot.jpg)
-
+<img src="./screenshot.jpg" width="40%" height="40%"/>
 
 # TODO
 ## TNN、MNN速度补充，欢迎大家贡献

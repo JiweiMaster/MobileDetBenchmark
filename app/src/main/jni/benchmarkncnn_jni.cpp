@@ -132,33 +132,36 @@ public:
             {
                 model_small_name = "picodet";
             }
-            if (model_name.find("nanodet") != string::npos)
+            else if (model_name.find("nanodet") != string::npos)
             {
                 model_small_name = "nanodet";
             }
-            if (model_name.find("ppyolo") != string::npos)
+            else if (model_name.find("ppyolo") != string::npos)
             {
                 model_small_name = "ppyolo";
             }
-            if (model_name.find("yolox") != string::npos)
+            else if (model_name.find("yolox") != string::npos)
             {
                 model_small_name = "yolox";
             }
-            if (model_name.find("yolov3-") != string::npos)
+            else if (model_name.find("yolov3-") != string::npos)
             {
                 model_small_name = "yolov3-";
             }
-            if (model_name.find("yolov4-") != string::npos)
+            else if (model_name.find("yolov4-") != string::npos)
             {
                 model_small_name = "yolov4-";
             }
-            if (model_name.find("yolov5n-") != string::npos)
+            else if (model_name.find("yolov5n-") != string::npos)
             {
                 model_small_name = "yolov5n-";
             }
-            if (model_name.find("yolov5s-") != string::npos)
+            else if (model_name.find("yolov5s-") != string::npos)
             {
                 model_small_name = "yolov5s-";
+            }
+            else{
+                model_small_name = "other";
             }
             __android_log_print(ANDROID_LOG_DEBUG, "current: ", "model_small_name: %s", model_small_name.data());
             vector<string> heads = modelHead[model_small_name];
@@ -182,33 +185,36 @@ public:
                 {
                     model_small_name = "picodet";
                 }
-                if (model_name.find("nanodet") != string::npos)
+                else if (model_name.find("nanodet") != string::npos)
                 {
                     model_small_name = "nanodet";
                 }
-                if (model_name.find("ppyolo") != string::npos)
+                else if (model_name.find("ppyolo") != string::npos)
                 {
                     model_small_name = "ppyolo";
                 }
-                if (model_name.find("yolox") != string::npos)
+                else if (model_name.find("yolox") != string::npos)
                 {
                     model_small_name = "yolox";
                 }
-                if (model_name.find("yolov3-") != string::npos)
+                else if (model_name.find("yolov3-") != string::npos)
                 {
                     model_small_name = "yolov3-";
                 }
-                if (model_name.find("yolov4-") != string::npos)
+                else if (model_name.find("yolov4-") != string::npos)
                 {
                     model_small_name = "yolov4-";
                 }
-                if (model_name.find("yolov5n-") != string::npos)
+                else if (model_name.find("yolov5n-") != string::npos)
                 {
                     model_small_name = "yolov5n-";
                 }
-                if (model_name.find("yolov5s-") != string::npos)
+                else if (model_name.find("yolov5s-") != string::npos)
                 {
                     model_small_name = "yolov5s-";
+                }
+                else{
+                    model_small_name = "other";
                 }
                 vector<string> heads = modelHead[model_small_name];
                 for (int i = 0; i < heads.size(); i++)

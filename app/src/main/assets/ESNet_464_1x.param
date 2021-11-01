@@ -1,0 +1,270 @@
+7767517
+268 304
+Input            data                     0 1 data -23330=4,3,224,224,3 0=224 1=224 2=3
+MemoryData       fc6_offset               0 1 fc6_offset 0=1000
+Convolution      Conv_0                   1 1 data conv2d_80.tmp_0 0=24 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=648
+HardSwish        Div_0                    1 1 conv2d_80.tmp_0 batch_norm_0.tmp_4 0=1.666667e-01 1=5.000000e-01
+Pooling          MaxPool_0                1 1 batch_norm_0.tmp_4 pool2d_0.tmp_0 0=0 1=3 11=3 2=2 12=2 3=1 13=1 14=1 15=1 5=1
+Split            splitncnn_0              1 2 pool2d_0.tmp_0 pool2d_0.tmp_0_splitncnn_0 pool2d_0.tmp_0_splitncnn_1
+ConvolutionDepthWise Conv_1                   1 1 pool2d_0.tmp_0_splitncnn_1 depthwise_conv2d_0.tmp_0 0=24 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=216 7=24
+Convolution      Conv_2                   1 1 depthwise_conv2d_0.tmp_0 conv2d_81.tmp_0 0=56 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=1344
+HardSwish        Div_1                    1 1 conv2d_81.tmp_0 batch_norm_2.tmp_4 0=1.666667e-01 1=5.000000e-01
+Convolution      Conv_3                   1 1 pool2d_0.tmp_0_splitncnn_0 conv2d_82.tmp_0 0=56 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=1344
+HardSwish        Div_2                    1 1 conv2d_82.tmp_0 batch_norm_3.tmp_4 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise Conv_4                   1 1 batch_norm_3.tmp_4 depthwise_conv2d_1.tmp_0 0=56 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=504 7=56
+Split            splitncnn_1              1 2 depthwise_conv2d_1.tmp_0 depthwise_conv2d_1.tmp_0_splitncnn_0 depthwise_conv2d_1.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_0      1 1 depthwise_conv2d_1.tmp_0_splitncnn_1 pool2d_1.tmp_0 0=1 4=1
+Convolution      Conv_5                   1 1 pool2d_1.tmp_0 conv2d_83.tmp_0 0=14 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=784
+ReLU             Relu_0                   1 1 conv2d_83.tmp_0 relu_0.tmp_0
+Convolution      Conv_6                   1 1 relu_0.tmp_0 conv2d_84.tmp_0 0=56 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=784
+HardSigmoid      HardSigmoid_0            1 1 conv2d_84.tmp_0 hardsigmoid_0.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_3                    2 1 depthwise_conv2d_1.tmp_0_splitncnn_0 hardsigmoid_0.tmp_0 elementwise_mul_0 0=2
+Convolution      Conv_7                   1 1 elementwise_mul_0 conv2d_85.tmp_0 0=56 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3136
+HardSwish        Div_3                    1 1 conv2d_85.tmp_0 batch_norm_5.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_0                 2 1 batch_norm_2.tmp_4 batch_norm_5.tmp_4 concat_0.tmp_0 0=0
+ConvolutionDepthWise Conv_8                   1 1 concat_0.tmp_0 depthwise_conv2d_2.tmp_0 0=112 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=1008 7=112
+HardSwish        Div_4                    1 1 depthwise_conv2d_2.tmp_0 batch_norm_6.tmp_4 0=1.666667e-01 1=5.000000e-01
+Convolution      Conv_9                   1 1 batch_norm_6.tmp_4 conv2d_86.tmp_0 0=112 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=12544
+HardSwish        Div_5                    1 1 conv2d_86.tmp_0 batch_norm_7.tmp_4 0=1.666667e-01 1=5.000000e-01
+Slice            Split_0                  1 2 batch_norm_7.tmp_4 split_0.tmp_0 split_0.tmp_1 -23300=2,56,-233 1=0
+Convolution      Conv_10                  1 1 split_0.tmp_1 conv2d_87.tmp_0 0=56 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3136
+HardSwish        Div_6                    1 1 conv2d_87.tmp_0 batch_norm_8.tmp_4 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_2              1 2 batch_norm_8.tmp_4 batch_norm_8.tmp_4_splitncnn_0 batch_norm_8.tmp_4_splitncnn_1
+ConvolutionDepthWise Conv_11                  1 1 batch_norm_8.tmp_4_splitncnn_1 depthwise_conv2d_3.tmp_0 0=56 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=504 7=56
+Concat           Concat_1                 2 1 batch_norm_8.tmp_4_splitncnn_0 depthwise_conv2d_3.tmp_0 concat_1.tmp_0 0=0
+Split            splitncnn_3              1 2 concat_1.tmp_0 concat_1.tmp_0_splitncnn_0 concat_1.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_1      1 1 concat_1.tmp_0_splitncnn_1 pool2d_2.tmp_0 0=1 4=1
+Convolution      Conv_12                  1 1 pool2d_2.tmp_0 conv2d_88.tmp_0 0=28 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3136
+ReLU             Relu_1                   1 1 conv2d_88.tmp_0 relu_1.tmp_0
+Convolution      Conv_13                  1 1 relu_1.tmp_0 conv2d_89.tmp_0 0=112 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3136
+HardSigmoid      HardSigmoid_1            1 1 conv2d_89.tmp_0 hardsigmoid_1.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_8                    2 1 concat_1.tmp_0_splitncnn_0 hardsigmoid_1.tmp_0 elementwise_mul_1 0=2
+Convolution      Conv_14                  1 1 elementwise_mul_1 conv2d_90.tmp_0 0=56 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=6272
+HardSwish        Div_7                    1 1 conv2d_90.tmp_0 batch_norm_10.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_2                 2 1 split_0.tmp_0 batch_norm_10.tmp_4 concat_2.tmp_0 0=0
+Reshape          Reshape_4                1 1 concat_2.tmp_0 reshape2_0.tmp_0 0=784 1=56 2=2
+Permute          Transpose_0              1 1 reshape2_0.tmp_0 transpose_0.tmp_0 0=2
+Reshape          Reshape_5                1 1 transpose_0.tmp_0 reshape2_1.tmp_0 0=28 1=28 2=112
+Slice            Split_1                  1 2 reshape2_1.tmp_0 split_1.tmp_0 split_1.tmp_1 -23300=2,56,-233 1=0
+Convolution      Conv_15                  1 1 split_1.tmp_1 conv2d_91.tmp_0 0=56 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3136
+HardSwish        Div_8                    1 1 conv2d_91.tmp_0 batch_norm_11.tmp_4 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_4              1 2 batch_norm_11.tmp_4 batch_norm_11.tmp_4_splitncnn_0 batch_norm_11.tmp_4_splitncnn_1
+ConvolutionDepthWise Conv_16                  1 1 batch_norm_11.tmp_4_splitncnn_1 depthwise_conv2d_4.tmp_0 0=56 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=504 7=56
+Concat           Concat_3                 2 1 batch_norm_11.tmp_4_splitncnn_0 depthwise_conv2d_4.tmp_0 concat_3.tmp_0 0=0
+Split            splitncnn_5              1 2 concat_3.tmp_0 concat_3.tmp_0_splitncnn_0 concat_3.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_2      1 1 concat_3.tmp_0_splitncnn_1 pool2d_3.tmp_0 0=1 4=1
+Convolution      Conv_17                  1 1 pool2d_3.tmp_0 conv2d_92.tmp_0 0=28 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3136
+ReLU             Relu_2                   1 1 conv2d_92.tmp_0 relu_2.tmp_0
+Convolution      Conv_18                  1 1 relu_2.tmp_0 conv2d_93.tmp_0 0=112 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3136
+HardSigmoid      HardSigmoid_2            1 1 conv2d_93.tmp_0 hardsigmoid_2.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_11                   2 1 concat_3.tmp_0_splitncnn_0 hardsigmoid_2.tmp_0 elementwise_mul_2 0=2
+Convolution      Conv_19                  1 1 elementwise_mul_2 conv2d_94.tmp_0 0=56 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=6272
+HardSwish        Div_9                    1 1 conv2d_94.tmp_0 batch_norm_13.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_4                 2 1 split_1.tmp_0 batch_norm_13.tmp_4 concat_4.tmp_0 0=0
+Reshape          Reshape_8                1 1 concat_4.tmp_0 reshape2_2.tmp_0 0=784 1=56 2=2
+Permute          Transpose_1              1 1 reshape2_2.tmp_0 transpose_1.tmp_0 0=2
+Reshape          Reshape_9                1 1 transpose_1.tmp_0 reshape2_3.tmp_0 0=28 1=28 2=112
+Split            splitncnn_6              1 2 reshape2_3.tmp_0 reshape2_3.tmp_0_splitncnn_0 reshape2_3.tmp_0_splitncnn_1
+ConvolutionDepthWise Conv_20                  1 1 reshape2_3.tmp_0_splitncnn_1 depthwise_conv2d_5.tmp_0 0=112 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=1008 7=112
+Convolution      Conv_21                  1 1 depthwise_conv2d_5.tmp_0 conv2d_95.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=13440
+HardSwish        Div_10                   1 1 conv2d_95.tmp_0 batch_norm_15.tmp_4 0=1.666667e-01 1=5.000000e-01
+Convolution      Conv_22                  1 1 reshape2_3.tmp_0_splitncnn_0 conv2d_96.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=13440
+HardSwish        Div_11                   1 1 conv2d_96.tmp_0 batch_norm_16.tmp_4 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise Conv_23                  1 1 batch_norm_16.tmp_4 depthwise_conv2d_6.tmp_0 0=120 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=1080 7=120
+Split            splitncnn_7              1 2 depthwise_conv2d_6.tmp_0 depthwise_conv2d_6.tmp_0_splitncnn_0 depthwise_conv2d_6.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_3      1 1 depthwise_conv2d_6.tmp_0_splitncnn_1 pool2d_4.tmp_0 0=1 4=1
+Convolution      Conv_24                  1 1 pool2d_4.tmp_0 conv2d_97.tmp_0 0=30 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3600
+ReLU             Relu_3                   1 1 conv2d_97.tmp_0 relu_3.tmp_0
+Convolution      Conv_25                  1 1 relu_3.tmp_0 conv2d_98.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=3600
+HardSigmoid      HardSigmoid_3            1 1 conv2d_98.tmp_0 hardsigmoid_3.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_15                   2 1 depthwise_conv2d_6.tmp_0_splitncnn_0 hardsigmoid_3.tmp_0 elementwise_mul_3 0=2
+Convolution      Conv_26                  1 1 elementwise_mul_3 conv2d_99.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSwish        Div_12                   1 1 conv2d_99.tmp_0 batch_norm_18.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_5                 2 1 batch_norm_15.tmp_4 batch_norm_18.tmp_4 concat_5.tmp_0 0=0
+ConvolutionDepthWise Conv_27                  1 1 concat_5.tmp_0 depthwise_conv2d_7.tmp_0 0=240 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2160 7=240
+HardSwish        Div_13                   1 1 depthwise_conv2d_7.tmp_0 batch_norm_19.tmp_4 0=1.666667e-01 1=5.000000e-01
+Convolution      Conv_28                  1 1 batch_norm_19.tmp_4 conv2d_100.tmp_0 0=240 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=57600
+HardSwish        Div_14                   1 1 conv2d_100.tmp_0 batch_norm_20.tmp_4 0=1.666667e-01 1=5.000000e-01
+Slice            Split_2                  1 2 batch_norm_20.tmp_4 split_2.tmp_0 split_2.tmp_1 -23300=2,120,-233 1=0
+Convolution      Conv_29                  1 1 split_2.tmp_1 conv2d_101.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSwish        Div_15                   1 1 conv2d_101.tmp_0 batch_norm_21.tmp_4 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_8              1 2 batch_norm_21.tmp_4 batch_norm_21.tmp_4_splitncnn_0 batch_norm_21.tmp_4_splitncnn_1
+ConvolutionDepthWise Conv_30                  1 1 batch_norm_21.tmp_4_splitncnn_1 depthwise_conv2d_8.tmp_0 0=120 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=1080 7=120
+Concat           Concat_6                 2 1 batch_norm_21.tmp_4_splitncnn_0 depthwise_conv2d_8.tmp_0 concat_6.tmp_0 0=0
+Split            splitncnn_9              1 2 concat_6.tmp_0 concat_6.tmp_0_splitncnn_0 concat_6.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_4      1 1 concat_6.tmp_0_splitncnn_1 pool2d_5.tmp_0 0=1 4=1
+Convolution      Conv_31                  1 1 pool2d_5.tmp_0 conv2d_102.tmp_0 0=60 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+ReLU             Relu_4                   1 1 conv2d_102.tmp_0 relu_4.tmp_0
+Convolution      Conv_32                  1 1 relu_4.tmp_0 conv2d_103.tmp_0 0=240 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSigmoid      HardSigmoid_4            1 1 conv2d_103.tmp_0 hardsigmoid_4.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_20                   2 1 concat_6.tmp_0_splitncnn_0 hardsigmoid_4.tmp_0 elementwise_mul_4 0=2
+Convolution      Conv_33                  1 1 elementwise_mul_4 conv2d_104.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=28800
+HardSwish        Div_16                   1 1 conv2d_104.tmp_0 batch_norm_23.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_7                 2 1 split_2.tmp_0 batch_norm_23.tmp_4 concat_7.tmp_0 0=0
+Reshape          Reshape_14               1 1 concat_7.tmp_0 reshape2_4.tmp_0 0=196 1=120 2=2
+Permute          Transpose_2              1 1 reshape2_4.tmp_0 transpose_2.tmp_0 0=2
+Reshape          Reshape_15               1 1 transpose_2.tmp_0 reshape2_5.tmp_0 0=14 1=14 2=240
+Slice            Split_3                  1 2 reshape2_5.tmp_0 split_3.tmp_0 split_3.tmp_1 -23300=2,120,-233 1=0
+Convolution      Conv_34                  1 1 split_3.tmp_1 conv2d_105.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSwish        Div_17                   1 1 conv2d_105.tmp_0 batch_norm_24.tmp_4 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_10             1 2 batch_norm_24.tmp_4 batch_norm_24.tmp_4_splitncnn_0 batch_norm_24.tmp_4_splitncnn_1
+ConvolutionDepthWise Conv_35                  1 1 batch_norm_24.tmp_4_splitncnn_1 depthwise_conv2d_9.tmp_0 0=120 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=1080 7=120
+Concat           Concat_8                 2 1 batch_norm_24.tmp_4_splitncnn_0 depthwise_conv2d_9.tmp_0 concat_8.tmp_0 0=0
+Split            splitncnn_11             1 2 concat_8.tmp_0 concat_8.tmp_0_splitncnn_0 concat_8.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_5      1 1 concat_8.tmp_0_splitncnn_1 pool2d_6.tmp_0 0=1 4=1
+Convolution      Conv_36                  1 1 pool2d_6.tmp_0 conv2d_106.tmp_0 0=60 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+ReLU             Relu_5                   1 1 conv2d_106.tmp_0 relu_5.tmp_0
+Convolution      Conv_37                  1 1 relu_5.tmp_0 conv2d_107.tmp_0 0=240 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSigmoid      HardSigmoid_5            1 1 conv2d_107.tmp_0 hardsigmoid_5.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_23                   2 1 concat_8.tmp_0_splitncnn_0 hardsigmoid_5.tmp_0 elementwise_mul_5 0=2
+Convolution      Conv_38                  1 1 elementwise_mul_5 conv2d_108.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=28800
+HardSwish        Div_18                   1 1 conv2d_108.tmp_0 batch_norm_26.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_9                 2 1 split_3.tmp_0 batch_norm_26.tmp_4 concat_9.tmp_0 0=0
+Reshape          Reshape_18               1 1 concat_9.tmp_0 reshape2_6.tmp_0 0=196 1=120 2=2
+Permute          Transpose_3              1 1 reshape2_6.tmp_0 transpose_3.tmp_0 0=2
+Reshape          Reshape_19               1 1 transpose_3.tmp_0 reshape2_7.tmp_0 0=14 1=14 2=240
+Slice            Split_4                  1 2 reshape2_7.tmp_0 split_4.tmp_0 split_4.tmp_1 -23300=2,120,-233 1=0
+Convolution      Conv_39                  1 1 split_4.tmp_1 conv2d_109.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSwish        Div_19                   1 1 conv2d_109.tmp_0 batch_norm_27.tmp_4 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_12             1 2 batch_norm_27.tmp_4 batch_norm_27.tmp_4_splitncnn_0 batch_norm_27.tmp_4_splitncnn_1
+ConvolutionDepthWise Conv_40                  1 1 batch_norm_27.tmp_4_splitncnn_1 depthwise_conv2d_10.tmp_0 0=120 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=1080 7=120
+Concat           Concat_10                2 1 batch_norm_27.tmp_4_splitncnn_0 depthwise_conv2d_10.tmp_0 concat_10.tmp_0 0=0
+Split            splitncnn_13             1 2 concat_10.tmp_0 concat_10.tmp_0_splitncnn_0 concat_10.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_6      1 1 concat_10.tmp_0_splitncnn_1 pool2d_7.tmp_0 0=1 4=1
+Convolution      Conv_41                  1 1 pool2d_7.tmp_0 conv2d_110.tmp_0 0=60 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+ReLU             Relu_6                   1 1 conv2d_110.tmp_0 relu_6.tmp_0
+Convolution      Conv_42                  1 1 relu_6.tmp_0 conv2d_111.tmp_0 0=240 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSigmoid      HardSigmoid_6            1 1 conv2d_111.tmp_0 hardsigmoid_6.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_26                   2 1 concat_10.tmp_0_splitncnn_0 hardsigmoid_6.tmp_0 elementwise_mul_6 0=2
+Convolution      Conv_43                  1 1 elementwise_mul_6 conv2d_112.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=28800
+HardSwish        Div_20                   1 1 conv2d_112.tmp_0 batch_norm_29.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_11                2 1 split_4.tmp_0 batch_norm_29.tmp_4 concat_11.tmp_0 0=0
+Reshape          Reshape_22               1 1 concat_11.tmp_0 reshape2_8.tmp_0 0=196 1=120 2=2
+Permute          Transpose_4              1 1 reshape2_8.tmp_0 transpose_4.tmp_0 0=2
+Reshape          Reshape_23               1 1 transpose_4.tmp_0 reshape2_9.tmp_0 0=14 1=14 2=240
+Slice            Split_5                  1 2 reshape2_9.tmp_0 split_5.tmp_0 split_5.tmp_1 -23300=2,120,-233 1=0
+Convolution      Conv_44                  1 1 split_5.tmp_1 conv2d_113.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSwish        Div_21                   1 1 conv2d_113.tmp_0 batch_norm_30.tmp_4 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_14             1 2 batch_norm_30.tmp_4 batch_norm_30.tmp_4_splitncnn_0 batch_norm_30.tmp_4_splitncnn_1
+ConvolutionDepthWise Conv_45                  1 1 batch_norm_30.tmp_4_splitncnn_1 depthwise_conv2d_11.tmp_0 0=120 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=1080 7=120
+Concat           Concat_12                2 1 batch_norm_30.tmp_4_splitncnn_0 depthwise_conv2d_11.tmp_0 concat_12.tmp_0 0=0
+Split            splitncnn_15             1 2 concat_12.tmp_0 concat_12.tmp_0_splitncnn_0 concat_12.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_7      1 1 concat_12.tmp_0_splitncnn_1 pool2d_8.tmp_0 0=1 4=1
+Convolution      Conv_46                  1 1 pool2d_8.tmp_0 conv2d_114.tmp_0 0=60 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+ReLU             Relu_7                   1 1 conv2d_114.tmp_0 relu_7.tmp_0
+Convolution      Conv_47                  1 1 relu_7.tmp_0 conv2d_115.tmp_0 0=240 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSigmoid      HardSigmoid_7            1 1 conv2d_115.tmp_0 hardsigmoid_7.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_29                   2 1 concat_12.tmp_0_splitncnn_0 hardsigmoid_7.tmp_0 elementwise_mul_7 0=2
+Convolution      Conv_48                  1 1 elementwise_mul_7 conv2d_116.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=28800
+HardSwish        Div_22                   1 1 conv2d_116.tmp_0 batch_norm_32.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_13                2 1 split_5.tmp_0 batch_norm_32.tmp_4 concat_13.tmp_0 0=0
+Reshape          Reshape_26               1 1 concat_13.tmp_0 reshape2_10.tmp_0 0=196 1=120 2=2
+Permute          Transpose_5              1 1 reshape2_10.tmp_0 transpose_5.tmp_0 0=2
+Reshape          Reshape_27               1 1 transpose_5.tmp_0 reshape2_11.tmp_0 0=14 1=14 2=240
+Slice            Split_6                  1 2 reshape2_11.tmp_0 split_6.tmp_0 split_6.tmp_1 -23300=2,120,-233 1=0
+Convolution      Conv_49                  1 1 split_6.tmp_1 conv2d_117.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSwish        Div_23                   1 1 conv2d_117.tmp_0 batch_norm_33.tmp_4 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_16             1 2 batch_norm_33.tmp_4 batch_norm_33.tmp_4_splitncnn_0 batch_norm_33.tmp_4_splitncnn_1
+ConvolutionDepthWise Conv_50                  1 1 batch_norm_33.tmp_4_splitncnn_1 depthwise_conv2d_12.tmp_0 0=120 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=1080 7=120
+Concat           Concat_14                2 1 batch_norm_33.tmp_4_splitncnn_0 depthwise_conv2d_12.tmp_0 concat_14.tmp_0 0=0
+Split            splitncnn_17             1 2 concat_14.tmp_0 concat_14.tmp_0_splitncnn_0 concat_14.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_8      1 1 concat_14.tmp_0_splitncnn_1 pool2d_9.tmp_0 0=1 4=1
+Convolution      Conv_51                  1 1 pool2d_9.tmp_0 conv2d_118.tmp_0 0=60 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+ReLU             Relu_8                   1 1 conv2d_118.tmp_0 relu_8.tmp_0
+Convolution      Conv_52                  1 1 relu_8.tmp_0 conv2d_119.tmp_0 0=240 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSigmoid      HardSigmoid_8            1 1 conv2d_119.tmp_0 hardsigmoid_8.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_32                   2 1 concat_14.tmp_0_splitncnn_0 hardsigmoid_8.tmp_0 elementwise_mul_8 0=2
+Convolution      Conv_53                  1 1 elementwise_mul_8 conv2d_120.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=28800
+HardSwish        Div_24                   1 1 conv2d_120.tmp_0 batch_norm_35.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_15                2 1 split_6.tmp_0 batch_norm_35.tmp_4 concat_15.tmp_0 0=0
+Reshape          Reshape_30               1 1 concat_15.tmp_0 reshape2_12.tmp_0 0=196 1=120 2=2
+Permute          Transpose_6              1 1 reshape2_12.tmp_0 transpose_6.tmp_0 0=2
+Reshape          Reshape_31               1 1 transpose_6.tmp_0 reshape2_13.tmp_0 0=14 1=14 2=240
+Slice            Split_7                  1 2 reshape2_13.tmp_0 split_7.tmp_0 split_7.tmp_1 -23300=2,120,-233 1=0
+Convolution      Conv_54                  1 1 split_7.tmp_1 conv2d_121.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSwish        Div_25                   1 1 conv2d_121.tmp_0 batch_norm_36.tmp_4 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_18             1 2 batch_norm_36.tmp_4 batch_norm_36.tmp_4_splitncnn_0 batch_norm_36.tmp_4_splitncnn_1
+ConvolutionDepthWise Conv_55                  1 1 batch_norm_36.tmp_4_splitncnn_1 depthwise_conv2d_13.tmp_0 0=120 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=1080 7=120
+Concat           Concat_16                2 1 batch_norm_36.tmp_4_splitncnn_0 depthwise_conv2d_13.tmp_0 concat_16.tmp_0 0=0
+Split            splitncnn_19             1 2 concat_16.tmp_0 concat_16.tmp_0_splitncnn_0 concat_16.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_9      1 1 concat_16.tmp_0_splitncnn_1 pool2d_10.tmp_0 0=1 4=1
+Convolution      Conv_56                  1 1 pool2d_10.tmp_0 conv2d_122.tmp_0 0=60 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+ReLU             Relu_9                   1 1 conv2d_122.tmp_0 relu_9.tmp_0
+Convolution      Conv_57                  1 1 relu_9.tmp_0 conv2d_123.tmp_0 0=240 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=14400
+HardSigmoid      HardSigmoid_9            1 1 conv2d_123.tmp_0 hardsigmoid_9.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_35                   2 1 concat_16.tmp_0_splitncnn_0 hardsigmoid_9.tmp_0 elementwise_mul_9 0=2
+Convolution      Conv_58                  1 1 elementwise_mul_9 conv2d_124.tmp_0 0=120 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=28800
+HardSwish        Div_26                   1 1 conv2d_124.tmp_0 batch_norm_38.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_17                2 1 split_7.tmp_0 batch_norm_38.tmp_4 concat_17.tmp_0 0=0
+Reshape          Reshape_34               1 1 concat_17.tmp_0 reshape2_14.tmp_0 0=196 1=120 2=2
+Permute          Transpose_7              1 1 reshape2_14.tmp_0 transpose_7.tmp_0 0=2
+Reshape          Reshape_35               1 1 transpose_7.tmp_0 reshape2_15.tmp_0 0=14 1=14 2=240
+Split            splitncnn_20             1 2 reshape2_15.tmp_0 reshape2_15.tmp_0_splitncnn_0 reshape2_15.tmp_0_splitncnn_1
+ConvolutionDepthWise Conv_59                  1 1 reshape2_15.tmp_0_splitncnn_1 depthwise_conv2d_14.tmp_0 0=240 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=2160 7=240
+Convolution      Conv_60                  1 1 depthwise_conv2d_14.tmp_0 conv2d_125.tmp_0 0=232 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=55680
+HardSwish        Div_27                   1 1 conv2d_125.tmp_0 batch_norm_40.tmp_4 0=1.666667e-01 1=5.000000e-01
+Convolution      Conv_61                  1 1 reshape2_15.tmp_0_splitncnn_0 conv2d_126.tmp_0 0=232 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=55680
+HardSwish        Div_28                   1 1 conv2d_126.tmp_0 batch_norm_41.tmp_4 0=1.666667e-01 1=5.000000e-01
+ConvolutionDepthWise Conv_62                  1 1 batch_norm_41.tmp_4 depthwise_conv2d_15.tmp_0 0=232 1=3 11=3 2=1 12=1 3=2 13=2 4=1 14=1 15=1 16=1 5=1 6=2088 7=232
+Split            splitncnn_21             1 2 depthwise_conv2d_15.tmp_0 depthwise_conv2d_15.tmp_0_splitncnn_0 depthwise_conv2d_15.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_10     1 1 depthwise_conv2d_15.tmp_0_splitncnn_1 pool2d_11.tmp_0 0=1 4=1
+Convolution      Conv_63                  1 1 pool2d_11.tmp_0 conv2d_127.tmp_0 0=58 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=13456
+ReLU             Relu_10                  1 1 conv2d_127.tmp_0 relu_10.tmp_0
+Convolution      Conv_64                  1 1 relu_10.tmp_0 conv2d_128.tmp_0 0=232 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=13456
+HardSigmoid      HardSigmoid_10           1 1 conv2d_128.tmp_0 hardsigmoid_10.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_39                   2 1 depthwise_conv2d_15.tmp_0_splitncnn_0 hardsigmoid_10.tmp_0 elementwise_mul_10 0=2
+Convolution      Conv_65                  1 1 elementwise_mul_10 conv2d_129.tmp_0 0=232 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=53824
+HardSwish        Div_29                   1 1 conv2d_129.tmp_0 batch_norm_43.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_18                2 1 batch_norm_40.tmp_4 batch_norm_43.tmp_4 concat_18.tmp_0 0=0
+ConvolutionDepthWise Conv_66                  1 1 concat_18.tmp_0 depthwise_conv2d_16.tmp_0 0=464 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=4176 7=464
+HardSwish        Div_30                   1 1 depthwise_conv2d_16.tmp_0 batch_norm_44.tmp_4 0=1.666667e-01 1=5.000000e-01
+Convolution      Conv_67                  1 1 batch_norm_44.tmp_4 conv2d_130.tmp_0 0=464 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=215296
+HardSwish        Div_31                   1 1 conv2d_130.tmp_0 batch_norm_45.tmp_4 0=1.666667e-01 1=5.000000e-01
+Slice            Split_8                  1 2 batch_norm_45.tmp_4 split_8.tmp_0 split_8.tmp_1 -23300=2,232,-233 1=0
+Convolution      Conv_68                  1 1 split_8.tmp_1 conv2d_131.tmp_0 0=232 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=53824
+HardSwish        Div_32                   1 1 conv2d_131.tmp_0 batch_norm_46.tmp_4 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_22             1 2 batch_norm_46.tmp_4 batch_norm_46.tmp_4_splitncnn_0 batch_norm_46.tmp_4_splitncnn_1
+ConvolutionDepthWise Conv_69                  1 1 batch_norm_46.tmp_4_splitncnn_1 depthwise_conv2d_17.tmp_0 0=232 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2088 7=232
+Concat           Concat_19                2 1 batch_norm_46.tmp_4_splitncnn_0 depthwise_conv2d_17.tmp_0 concat_19.tmp_0 0=0
+Split            splitncnn_23             1 2 concat_19.tmp_0 concat_19.tmp_0_splitncnn_0 concat_19.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_11     1 1 concat_19.tmp_0_splitncnn_1 pool2d_12.tmp_0 0=1 4=1
+Convolution      Conv_70                  1 1 pool2d_12.tmp_0 conv2d_132.tmp_0 0=116 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=53824
+ReLU             Relu_11                  1 1 conv2d_132.tmp_0 relu_11.tmp_0
+Convolution      Conv_71                  1 1 relu_11.tmp_0 conv2d_133.tmp_0 0=464 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=53824
+HardSigmoid      HardSigmoid_11           1 1 conv2d_133.tmp_0 hardsigmoid_11.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_44                   2 1 concat_19.tmp_0_splitncnn_0 hardsigmoid_11.tmp_0 elementwise_mul_11 0=2
+Convolution      Conv_72                  1 1 elementwise_mul_11 conv2d_134.tmp_0 0=232 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=107648
+HardSwish        Div_33                   1 1 conv2d_134.tmp_0 batch_norm_48.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_20                2 1 split_8.tmp_0 batch_norm_48.tmp_4 concat_20.tmp_0 0=0
+Reshape          Reshape_40               1 1 concat_20.tmp_0 reshape2_16.tmp_0 0=49 1=232 2=2
+Permute          Transpose_8              1 1 reshape2_16.tmp_0 transpose_8.tmp_0 0=2
+Reshape          Reshape_41               1 1 transpose_8.tmp_0 reshape2_17.tmp_0 0=7 1=7 2=464
+Slice            Split_9                  1 2 reshape2_17.tmp_0 split_9.tmp_0 split_9.tmp_1 -23300=2,232,-233 1=0
+Convolution      Conv_73                  1 1 split_9.tmp_1 conv2d_135.tmp_0 0=232 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=53824
+HardSwish        Div_34                   1 1 conv2d_135.tmp_0 batch_norm_49.tmp_4 0=1.666667e-01 1=5.000000e-01
+Split            splitncnn_24             1 2 batch_norm_49.tmp_4 batch_norm_49.tmp_4_splitncnn_0 batch_norm_49.tmp_4_splitncnn_1
+ConvolutionDepthWise Conv_74                  1 1 batch_norm_49.tmp_4_splitncnn_1 depthwise_conv2d_18.tmp_0 0=232 1=3 11=3 2=1 12=1 3=1 13=1 4=1 14=1 15=1 16=1 5=1 6=2088 7=232
+Concat           Concat_21                2 1 batch_norm_49.tmp_4_splitncnn_0 depthwise_conv2d_18.tmp_0 concat_21.tmp_0 0=0
+Split            splitncnn_25             1 2 concat_21.tmp_0 concat_21.tmp_0_splitncnn_0 concat_21.tmp_0_splitncnn_1
+Pooling          GlobalAveragePool_12     1 1 concat_21.tmp_0_splitncnn_1 pool2d_13.tmp_0 0=1 4=1
+Convolution      Conv_75                  1 1 pool2d_13.tmp_0 conv2d_136.tmp_0 0=116 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=53824
+ReLU             Relu_12                  1 1 conv2d_136.tmp_0 relu_12.tmp_0
+Convolution      Conv_76                  1 1 relu_12.tmp_0 conv2d_137.tmp_0 0=464 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=53824
+HardSigmoid      HardSigmoid_12           1 1 conv2d_137.tmp_0 hardsigmoid_12.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_47                   2 1 concat_21.tmp_0_splitncnn_0 hardsigmoid_12.tmp_0 elementwise_mul_12 0=2
+Convolution      Conv_77                  1 1 elementwise_mul_12 conv2d_138.tmp_0 0=232 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=107648
+HardSwish        Div_35                   1 1 conv2d_138.tmp_0 batch_norm_51.tmp_4 0=1.666667e-01 1=5.000000e-01
+Concat           Concat_22                2 1 split_9.tmp_0 batch_norm_51.tmp_4 concat_22.tmp_0 0=0
+Reshape          Reshape_44               1 1 concat_22.tmp_0 reshape2_18.tmp_0 0=49 1=232 2=2
+Permute          Transpose_9              1 1 reshape2_18.tmp_0 transpose_9.tmp_0 0=2
+Reshape          Reshape_45               1 1 transpose_9.tmp_0 reshape2_19.tmp_0 0=7 1=7 2=464
+Convolution      Conv_78                  1 1 reshape2_19.tmp_0 conv2d_139.tmp_0 0=1024 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=1 6=475136
+HardSwish        Div_36                   1 1 conv2d_139.tmp_0 batch_norm_52.tmp_4 0=1.666667e-01 1=5.000000e-01
+Pooling          GlobalAveragePool_13     1 1 batch_norm_52.tmp_4 pool2d_14.tmp_0 0=1 4=1
+Convolution      Conv_79                  1 1 pool2d_14.tmp_0 conv2d_140.tmp_0 0=1280 1=1 11=1 2=1 12=1 3=1 13=1 4=0 14=0 15=0 16=0 5=0 6=1310720
+HardSwish        Div_37                   1 1 conv2d_140.tmp_0 hardswish_1.tmp_0 0=1.666667e-01 1=5.000000e-01
+BinaryOp         Mul_51                   1 1 hardswish_1.tmp_0 dropout_1.tmp_0 0=2 1=1 2=8.000000e-01
+Reshape          Reshape_46               1 1 dropout_1.tmp_0 flatten_0.tmp_0 0=-1
+InnerProduct     MatMul_0                 1 1 flatten_0.tmp_0 linear_1.tmp_0 0=1000 1=0 2=1280000
+BinaryOp         Add_64                   2 1 linear_1.tmp_0 fc6_offset linear_1.tmp_1 0=0
+Softmax          Softmax_0                1 1 linear_1.tmp_1 output 0=0 1=1
