@@ -3,7 +3,7 @@ This repo is used to test the speed of the mobile terminal models
 
 
 # Benchmark Result
-| Model                        | Input size | mAP<sup>val<br>0.5:0.95 | mAP<sup>val<br>0.5 | Params<br><sup>(M) | FLOPS<br><sup>(G) | Latency<sup>[NCNN](#latency)<sup><br><sup>(ms) | Latency<sup>[lite](#latency)<sup><br><sup>(ms) | Config                                                                                                                                                                                                                                            |
+| Model                        | Input size | mAP<sup>val<br>0.5:0.95 | mAP<sup>val<br>0.5 | Params<br><sup>(M) | FLOPS<br><sup>(G) | Latency<sup>[1](#latency)<sup><br><sup>(ms) | Latency<sup>[2](#latency)<sup><br><sup>(ms) | Config                                                                                                                                                                                                                                            |
 | :--------------------------- | :--------: | :---------------------: | :----------------: | :----------------: | :---------------: | :--------------------------------------------: | :--------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | YOLOv3-Tiny                  |    416     |          16.6           |        33.1        |        8.86        |       5.62        |                     25.42                      |                       -                        | [model](https://media.githubusercontent.com/media/JiweiMaster/lfs/master/LargeFile/yolov3-tiny.zip) </br> [link](https://github.com/ultralytics/yolov3#:~:text=YOLOv3-tiny,640)                                                                   |
 | YOLOv4-Tiny                  |    416     |          21.7           |        40.2        |        6.06        |       6.96        |                     23.69                      |                       -                        | [model](https://media.githubusercontent.com/media/JiweiMaster/lfs/master/LargeFile/yolov4-tiny.zip) </br> [link](https://github.com/Tianxiaomo/pytorch-YOLOv4)                                                                                    |
@@ -30,7 +30,7 @@ This repo is used to test the speed of the mobile terminal models
 <details open>
 <summary><b>Table Notes:</b></summary>
 
-- <a name="latency">Latency:</a> All our models test on `Qualcomm Snapdragon 865(4\*A77+4\*A55)` with 4 threads by arm8 and with FP16. In the above table, test latency on [NCNN](https://github.com/Tencent/ncnn) and `Lite`->[Paddle-Lite](https://github.com/PaddlePaddle/Paddle-Lite).
+- <a name="latency">Latency:</a> All our models test on `Qualcomm Snapdragon 865(4\*A77+4\*A55)` with 4 threads by arm8 and with FP16. In the above table, test latency on `1` [NCNN](https://github.com/Tencent/ncnn) and `2` [Paddle-Lite](https://github.com/PaddlePaddle/Paddle-Lite).
 - All model are trained on COCO train2017 dataset and evaluated on COCO val2017.
 
 
