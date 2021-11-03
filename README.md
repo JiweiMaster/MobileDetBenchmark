@@ -47,5 +47,5 @@ This repo is used to test the speed of the mobile terminal models
  - [PaddleDetection](https://github.com/PaddlePaddle/PaddleDetection/tree/develop)
  - [PaddleLite](https://github.com/PaddlePaddle/Paddle-Lite)
  - [NCNN](https://github.com/Tencent/ncnn)
- - [PP-PicoDet-Android-Demo](git@github.com:JiweiMaster/PP-PicoDet-Android-Demo.git)
+ - [PP-PicoDet-Android-Demo](https://github.com/JiweiMaster/PP-PicoDet-Android-Demo)
  - [NCNN and Paddle-Lite Model Download](https://github.com/JiweiMaster/lfs)
