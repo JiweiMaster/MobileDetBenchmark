@@ -1,5 +1,5 @@
 #ifndef __MODEL_HEAD__
-#define __MPDEL_HEAD__
+#define __MODEL_HEAD__
 #include <string>
 #include <vector>
 using namespace std;
